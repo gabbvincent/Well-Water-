@@ -22,7 +22,7 @@ func main() {
   var a float64
   var b float64
   
-  //print message asking user to enter tjeir radius as inches and scan for a
+  //print message asking user to enter their radius as inches and scan for a
   fmt.Println("Enter the radius of your well casing in inches")
   fmt.Scanln(&a)
   
