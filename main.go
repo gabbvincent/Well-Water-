@@ -6,7 +6,7 @@ package main
 
 import "fmt"
 
-func Wellwater(a, b, c float64)float64{
+func Wellwater(a, b float64)float64{
   
 //Declare variable for GallonsPerfoot as float 64
 //Declare variable for Water as float 64 
@@ -36,16 +36,16 @@ func main() {
   fmt.Println("Enter in the amount of people in your household.")
   fmt.Scanln(&c)
 
- //call Wellwater(a, b, c)
-  Wellwater(a, b, c)
+ //call Wellwater(a, b)
+  Wellwater(a, b)
   //If the amount of water per person is less than 62.5 gallons then Print message saying that another tank is needed.
-  if Wellwater(a,b,c) / c > 62.5{
+  if Wellwater(a,b) / c > 62.5{
 
-    fmt.Println("Your Well casing will hold",Wellwater(a,b,c),"Gallons of water, plenty to supply your household and no need to install another holding tank.")
+    fmt.Println("Your Well casing will hold",Wellwater(a,b),"Gallons of water, plenty to supply your household and no need to install another holding tank.")
    // else print message telling how much gallons sand saying that it is enough water
   } else {
 
-    fmt.Println("Your well holds", Wellwater(a,b,c),"Gallons of water and that's not enough for your household, an additional tank is required to supply your household sufficiently.")
+    fmt.Println("Your well holds", Wellwater(a,b),"Gallons of water and that's not enough for your household, an additional tank is required to supply your household sufficiently.")
   }
 }
 //end
