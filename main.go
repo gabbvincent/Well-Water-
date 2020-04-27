@@ -12,14 +12,7 @@ func Wellwater(a, b, c float64)float64{
 //Declare variable for Water as float 64 
   var GallonsPerfoot float64 = a * b * .163 / 100
   var Water float64 = b * GallonsPerfoot
-  if Water / c > 62.5{
-
-    fmt.Println("Your Well casing will hold",Water,"Gallons of water, pleanty to supply your household and no need to install another holding tank.")
-    
-  } else {
-
-    fmt.Println("Your well holds", Water,"Gallons of water and that's not enough for your household, an additional tank is required to supply your household sufficiently.")
-  }
+  
   return Water 
 }
 
@@ -45,5 +38,14 @@ func main() {
 
  //call Wellwater(a, b, c)
   Wellwater(a, b, c)
+  //If the amount of water per person is less than 62.5 gallons then Print message saying that another tank is needed.
+  if Wellwater(a,b,c) / c > 62.5{
+
+    fmt.Println("Your Well casing will hold",Wellwater(a,b,c),"Gallons of water, plenty to supply your household and no need to install another holding tank.")
+   // else print message telling how much gallons sand saying that it is enough water
+  } else {
+
+    fmt.Println("Your well holds", Wellwater(a,b,c),"Gallons of water and that's not enough for your household, an additional tank is required to supply your household sufficiently.")
+  }
 }
 //end
