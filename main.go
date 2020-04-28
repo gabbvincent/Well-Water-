@@ -38,14 +38,14 @@ func main() {
 
  //call Wellwater(a, b)
   Wellwater(a, b)
-  //If the amount of water per person is less than 62.5 gallons then Print message saying that another tank is needed.
-  if Wellwater(a,b) / c > 62.5{
 
-    fmt.Println("Your Well casing will hold",Wellwater(a,b),"Gallons of water, plenty to supply your household and no need to install another holding tank.")
-   // else print message telling how much gallons sand saying that it is enough water
-  } else {
+  //If the amount of water per person is less than 62.5 gallons then Print message saying that another tank is needed.
+  if Wellwater(a,b) / c < 62.5{
 
     fmt.Println("Your well holds", Wellwater(a,b),"Gallons of water and that's not enough for your household, an additional tank is required to supply your household sufficiently.")
-  }
+
+   // else print message telling how much gallons sand saying that it is enough water
+  } else {
+    fmt.Println("Your Well casing will hold",Wellwater(a,b),"Gallons of water, plenty to supply your household and no need to install another holding tank.")
 }
-//end
+}//end.
